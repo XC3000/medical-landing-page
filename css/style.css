@@ -6299,3 +6299,10 @@ textarea:focus {
 .footerP p:hover {
   color: #18407c;
 }
+
+.btn.btn-tertiary {
+  color: #18407c;
+  border: 1px solid #18407c;
+  background: #fff;
+}
+
