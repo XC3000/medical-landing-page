@@ -413,6 +413,7 @@ li {
   background: #000000 url(../images/bg/1.jpg) no-repeat;
   background-size: cover;
   padding: 100px 0;
+  height: 100vh;
 }
 
 .intro1 h2 {
@@ -1140,6 +1141,20 @@ li {
   border-radius: 0px 15px 0px 15px;
   font-size: 36px;
   background: #fff;
+}
+
+.features-list li span {
+  width: 80px;
+  height: 80px;
+}
+
+.features-list li span img {
+  width: 80px;
+  height: 80px;
+}
+
+.features-list li h5 {
+  text-align: center !important;
 }
 
 .features-list li h5 {
@@ -6274,13 +6289,13 @@ textarea:focus {
 
   .services {
     padding: 0px 0 30px;
-}
+  }
 
-.c-info {
-  padding-top: 15px;
-  padding-bottom: 20px;
-  text-align: left;
-}
+  .c-info {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
 
   footer .list-inline li {
     width: 100%;
@@ -6336,4 +6351,17 @@ textarea:focus {
   color: #18407c;
   border: 1px solid #18407c;
   background: #fff;
+}
+
+.placement-program--grid {
+  display: grid;
+  grid-gap: 27px 22px;
+  grid-template-columns: repeat(auto-fit, 294px);
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.placement-program--grid div img {
+  width: 100%;
+  height: 100%;
 }
