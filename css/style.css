@@ -6355,7 +6355,7 @@ textarea:focus {
 
 .placement-program--grid {
   display: grid;
-  grid-gap: 27px 22px;
+  grid-gap: 27px 15vw;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 40px;
   justify-content: center;
