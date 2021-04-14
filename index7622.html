@@ -43,9 +43,52 @@
 
 <body id="page-top">
 
+    <!-- Modal -->
+  <div class="modal fade" id="registerModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Register Now</h4>
+        </div>
+        <div class="modal-body">
+            <form >
+                <div class="form-group">
+                    <label for="usr">Full Name</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year of Graduation</label>
+                    <input type="number" class="form-control" id="year">
+                </div>
+    
+                <button id="submitModalRegister" type="button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
     <div class="bottom-cta">
-        <p><a style="color:white;" href="tel:+91 9903639490">+91 9903639490</a> | Register</p>
-        
+        <p>
+            <a style="color:white;" href="tel:+91 9903639490">+91 9903639490</a> |
+            
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#registerModal">Register</button>
+            </p>
         
     </div>
     <div class="body">
@@ -480,7 +523,7 @@
 
             <!-- ELEMENTS - CALL TO ACTION -->
             <div class="cta-wrap placement-program">
-                <div class="">
+                <div class="container">
                     <div class="col-md-12">
                         <h1>Our Placement Partners</h1>
                         <!-- <p>Limited time offer for this month. No credit card required.</p> -->
@@ -559,7 +602,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="c-info">
                             <h5 class="text-center"><b>Address</b></h5>
-                            <p class="text-center"><a href="https://www.google.com/maps/place/IMS+BUSINESS+SCHOOL/@22.4602571,88.4096933,15z/data=!4m5!3m4!1s0x0:0xc2e74ff2a808110a!8m2!3d22.4602571!4d88.4096933">Roypur Ghutiary Sharif Road, Sonarpur, 700150</a></p>
+                            <p class="text-center"><a target="_blank" href="https://www.google.com/maps/place/IMS+BUSINESS+SCHOOL/@22.4602571,88.4096933,15z/data=!4m5!3m4!1s0x0:0xc2e74ff2a808110a!8m2!3d22.4602571!4d88.4096933">Roypur Ghutiary Sharif Road, Sonarpur, 700150</a></p>
                         </div>
                     </div>
 
@@ -695,9 +738,11 @@
     <script src="js/vendors/gmap.js"></script>
 
     <script>
-        function myFunction() {
-            console.log("hi");
-        }
+        document.getElementById('submitModalRegister').addEventListener("click", function () {
+            console.log("richard");
+
+            console.log(document.getElementById("usr").value);
+        })
     </script>
 
 </body>
