@@ -1,1 +1,1 @@
-# medical-landing-page
+# IMS-Landing-Page
