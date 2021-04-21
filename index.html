@@ -39,10 +39,141 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
+
+
 </head>
 
 <body id="page-top">
 
+    <!-- Modal -->
+  <div class="modal fade" id="registerModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Register Now</h4>
+        </div>
+        <div class="modal-body">
+            <form >
+                <div class="form-group">
+                    <label for="usr">Full Name</label>
+                    <input type="text" class="form-control" id="registerModalName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="registerModalEmail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="registerModalPhone">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year of Graduation</label>
+                    <input type="number" class="form-control" id="registerModalYear">
+                </div>
+    
+                <button id="submitModalRegister" type="button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Enquire Now Modal -->
+  <div class="modal fade" id="enquireModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enquire Now</h4>
+        </div>
+        <div class="modal-body">
+            <form >
+                <div class="form-group">
+                    <label for="usr">Full Name</label>
+                    <input type="text" class="form-control" id="enquireModalName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="enquireModalEmail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="enquireModalPhone">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year of Graduation</label>
+                    <input type="number" class="form-control" id="enquireModalYear">
+                </div>
+    
+                <button id="submitModalEnquire" type="button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!--  Modal -->
+  <div class="modal fade" id="downloadBrochureModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Download Brochure Now</h4>
+        </div>
+        <div class="modal-body">
+            <form >
+                <div class="form-group">
+                    <label for="usr">Full Name</label>
+                    <input type="text" class="form-control" id="downloadBrochureName">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="downloadBrochureEmail">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="downloadBrochurePhone">
+                </div>
+                <div class="form-group">
+                    <label for="year">Year of Graduation</label>
+                    <input type="number" class="form-control" id="downloadBrochureYear">
+                </div>
+    
+                <button id="downloadBrochureModalSubmit" type="button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="bottom-cta">
+        <p>
+            <a style="color:white;" href="tel:+91 9903639490">+91 9903639490</a> |
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#registerModal">Register</button>
+            
+            </p>
+        
+    </div>
     <div class="body">
         <!-- HEADER -->
         <!-- <header>
@@ -130,7 +261,8 @@
                                     </li>
 
                                     <li>
-                                        <i class="ilmosys-clinic"></i>
+                                        <!-- <i class="ilmosys-clinic"></i> -->
+                                        <span><img src="images/hero/100.png" alt="100"></span>
                                         <h5>100% Placement Guaranteed</h5>
                                     </li>
                                 </ul>
@@ -140,7 +272,7 @@
                     <br><br>
                     <div class="col-sm-5 col-md-7">
                         <div class="intro-form" id="join-us-form contact-form">
-                            <h4>Contact Us Now</h4>
+                            <h4>Register Now</h4>
                             
                             <div id="join-us-results"></div>
                             
@@ -149,24 +281,24 @@
                             
                                       <!-- Form -->
 		    <div class="form-group">
-              <input type="text" name="full_name" required id="first_name" class="form-control f-input input-field" placeholder="Full Name" />
+              <input type="text" name="full_name" required id="homepagename" class="form-control f-input input-field" placeholder="Full Name" />
             </div>
             <!-- <div class="form-group">
               <input type="text" name="last_name" id="last_name" class="form-control f-input input-field" placeholder="Last Name" />
             </div> -->
             <div class="form-group">
-              <input type="email" required name="email" class="form-control f-input input-field" placeholder="Email" />
+              <input type="email" id="homepageemail" required name="email" class="form-control f-input input-field" placeholder="Email" />
             </div>
             <div class="form-group">
-              <input type="number" name="phone" required maxlength="15"  class="form-control f-input input-field" placeholder="Phone" />
+              <input id="homepagephone" type="number" name="phone" required maxlength="15"  class="form-control f-input input-field" placeholder="Phone" />
             </div>
             <div class="form-group">
-                <input type="number" name="year" required maxlength="15"  class="form-control f-input input-field" placeholder="Year of Graduation" />
+                <input type="number" id="homepageyear" name="year" required maxlength="15"  class="form-control f-input input-field" placeholder="Year of Graduation" />
               </div>
             <!-- <div class="form-group">
               <input type="text" name="website" class="form-control f-input input-field" placeholder="website" />
             </div> -->
-			<button type="submit" class="btn btn-block btn-lg btn-primary" onclick="myFunction()" id="submit_btn">Make an Appointment</button>
+			<button type="submit" class="btn btn-block btn-lg btn-primary" id="homepageSubmitBtn">Submit</button>
         </div>
 					<div id="sendingMessage" class="statusMessage">
 						<p><i class="fa fa-spin fa-cog"></i> Sending your message. Please wait...</p>
@@ -194,28 +326,40 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <div class="stats2-info">
-                            <i class="ilmosys-business-manwoman"></i>
+                            <!-- <i class="ilmosys-business-manwoman"></i> -->
+                            <span class="img-span">
+                                <img src="images/stats/Alumni.svg" alt="Alumni">
+                            </span>
                             <p><span class="count">8000</span>+</p>
                             <h2>Alumni Network</h2>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3">
                         <div class="stats2-info">
-                            <i class="ilmosys-doctor"></i>
+                            <!-- <i class="ilmosys-doctor"></i> -->
+                            <span class="img-span">
+                                <img src="images/stats/Recruitment.svg" alt="Recruitment">
+                            </span>
                             <p><span class="count">400</span></p>
                             <h2>Recruiters</h2>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3">
                         <div class="stats2-info">
-                            <i class="ilmosys-ambulance"></i>
+                            <!-- <i class="ilmosys-ambulance"></i> -->
+                            <span class="img-span">
+                                <img src="images/stats/Experience.svg" alt="Experience">
+                            </span>
                             <p><span class="count">15</span>+</p>
                             <h2>Years of Experience</h2>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3">
                         <div class="stats2-info">
-                           <i class="ilmosys-hospital-2"></i>
+                           <!-- <i class="ilmosys-hospital-2"></i> -->
+                           <span class="img-span">
+                               <img src="images/stats/Professors.svg" alt="Professors">
+                            </span>
                             <p><span class="count">70</span>+</p>
                             <h2>Trained Professors</h2>
                         </div>
@@ -254,7 +398,7 @@
                                 <li><i class="icon-check"></i>Legend Speak (Inspirational Interactions with Industry Stalwarts)</li>
                             </ul>
                             <div class="space30"></div>
-                            <a href="#" class="btn btn-lg btn-primary">Learn More <i class="icon-arrow-right"></i></a>
+                            <button data-toggle="modal" data-target="#enquireModal" class="btn btn-lg btn-primary">Enquire Now <i class="icon-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -274,7 +418,8 @@
                                 <li><i class="icon-check"></i>Computer Lab with state-of-the-art equipment.</li>
                             </ul>
                             <div class="space30"></div>
-                            <a href="#" class="btn btn-lg btn-primary">Enquire Now <i class="icon-arrow-right"></i></a>
+                            
+                            <button data-toggle="modal" data-target="#enquireModal" class="btn btn-lg btn-primary">Enquire Now <i class="icon-arrow-right"></i></button>
                         </div>
                         <div class="col-md-8 text-center">
                             <img src="images/bg/3.jpg" class="pull-right img-responsive" alt="">
@@ -294,8 +439,8 @@
                         <div class="space10"></div>
                         <!-- <p>We communicate honestly. No hidden fees, no surprises, no upsells! Only honest work and trustworthy staff.</p> -->
                         <div class="text-center">
-                            <a href="#" class="btn btn-lg btn-tertiary" style="margin-right: 10px;">Learn More</a>
-                        <a href="#" class="btn btn-lg btn-tertiary">Learn More</a>
+                            <button data-toggle="modal" data-target="#downloadBrochureModal" class="btn btn-lg btn-tertiary cs-m"  style="margin-right: 10px;">Download Brochure</button>
+                            <button data-toggle="modal" data-target="#enquireModal" class="btn btn-lg btn-tertiary">Enquire Now <i class="icon-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -307,7 +452,7 @@
             <div class="container">
 
                 <div class="about-inline text-center">
-                    <p>- SERVICES -</p>
+                    <p>- PROGRAMS -</p>
                     <h3>Why IMS is the best choice for your MBA</h3>
                     <p>IMS Business School, Kolkata is an institution built with the core concept of honesty and transparency, to help guide the students towards career excellence.</p>
                 </div>
@@ -315,28 +460,40 @@
                 <div class="services-s5 row">
                     <div class="col-md-3">
                         <div class="service-content">
-                            <i class="ilmosys-astronaut"></i>
+                            <!-- <i class="ilmosys-astronaut"></i> -->
+                            <span class="img-span">
+                                <img src="images/services/MarketingMBA.svg" alt="MarketingMBA">
+                            </span>
                             <h4>MBA in Marketing</h4>
                             <p>If you have the creative and strategic mind-set for marketing, you’ll want to develop a solid skill set to back it up. An MBA with a Specialization in Marketing can give you a serious edge in your career.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="service-content">
-                            <i class="ilmosys-women"></i>
+                            <!-- <i class="ilmosys-women"></i> -->
+                            <span class="img-span">
+                                <img src="images/services/FinanceMBA.svg" alt="FinanceMBA">
+                            </span>
                             <h4>MBA in Finance</h4>
                             <p>Finance MBAs can prepare you for a wide range of roles in and beyond finance. From low-level managerial positions through the C-Suite, MBAs have a time tested appeal in a variety of organization types.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="service-content">
-                            <i class="ilmosys-virus-2"></i>
+                            <!-- <i class="ilmosys-virus-2"></i> -->
+                            <span class="img-span">
+                                <img src="images/services/OperationsMBA.svg" alt="OperationsMBA">
+                            </span>
                             <h4>MBA in Operations</h4>
                             <p>Topics like supply chain management, customer service, logistics, and human resources are covered in this program with an operations emphasis. A concentration in operations is the need of the hour addition to MBA.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="service-content">
-                            <i class="ilmosys-first-aid"></i>
+                            <!-- <i class="ilmosys-first-aid"></i> -->
+                            <span class="img-span">
+                                <img src="images/services/HumanResourceMba.svg" alt="HumanResourceMba">
+                            </span>
                             <h4>MBA in Human Resource</h4>
                             <p>No organization can get very far without consideration for its human capital. MBA with a specialization in Human Resources are some of the most trusted Post-graduate degree programs within large organizations.</p>
                         </div>
@@ -404,16 +561,16 @@
                                 <div>
                                     <i class="icon2-bubble"></i>
                                     <p>The journey at IMSBS was like a rollercoaster ride with each day bringing
-in new challenges and learnings filled with classroom lectures,
-guest speaker sessions, workshops etc.</p>
+                                        in new challenges and learnings filled with classroom lectures,
+                                        guest speaker sessions, workshops etc.</p>
                                     <span class="author">Srijit Ghosh Dastidar</span>
                                 </div>
 
                                 <div>
                                     <i class="icon2-bubble"></i>
                                     <p>The 2 years that was spent with IMSBS is one of the most enriching
-parts of my life. It helped me to develop myself from an amateur to
-well qualified personnel.</p>
+                                        parts of my life. It helped me to develop myself from an amateur to
+                                        well qualified personnel.</p>
                                     <span class="author">Tanusree Dey</span>
                                 </div>
                             </div>
@@ -436,7 +593,7 @@ well qualified personnel.</p>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <a href="#" class="btn btn-lg btn-primary pull-left">Learn More <i class="icon-arrow-right"></i></a>
+                            <a href="#" class="btn btn-lg btn-primary cs-m cs-s pull-left">Learn More <i class="icon-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -461,33 +618,40 @@ well qualified personnel.</p>
                                 <img src="images/placement-logos/AMRI.png" alt="amri">
                             </div>
                             <div>
-                                <img src="images/placement-logos/ApolloMunich.png" alt="amri">
+                                <img src="images/placement-logos/ApolloMunich.png" alt="ApolloMunich">
                             </div>
                             <div>
-                                <img src="images/placement-logos/Axis_Bank.png" alt="amri">
+                                <img src="images/placement-logos/AxisBank.png" alt="AxisBank">
                             </div>
                             <div>
-                                <img src="images/placement-logos/BandhanBank.jpg" alt="amri">
+                                <img src="images/placement-logos/BandhanBank.png" alt="BandhanBank">
                             </div>
                             <div>
-                                <img src="images/placement-logos/Emami.jpg" alt="amri">
+                                <img src="images/placement-logos/Emami.png"" alt="Emami">
                             </div>
                             <div>
-                                <img src="images/placement-logos/Exide.png" alt="amri">
+                                <img src="images/placement-logos/Exide.png" alt="Exide">
                             </div>
                             <div>
-                                <img src="images/placement-logos/Flipkart.jpg" alt="amri">
+                                <img src="images/placement-logos/Flipkart.png" alt="Flipkart">
                             </div>
-                            <img src="images/placement-logos/FutureGroup.png" alt="amri">
-                            <img src="images/placement-logos/HDFCBAnk.JPG" alt="amri">
-                            <img src="images/placement-logos/IKure.JPG" alt="amri">
-                            <img src="images/placement-logos/Khadims.png" alt="amri">
-                            <img src="images/placement-logos/KotakMahindra.png" alt="amri">
-                            <img src="images/placement-logos/L&T.png" alt="amri">
-                            <img src="images/placement-logos/MagicBricks.jpg" alt="amri">
-                            <img src="images/placement-logos/Quikr.jpg" alt="amri">
-                            <img src="images/placement-logos/Shriram.png" alt="amri">
-                           
+                            <div>
+                                <img src="images/placement-logos/FutureGroup.png" alt="FutureGroup">
+                            </div>
+                            <div>
+                                <img src="images/placement-logos/HDFCBAnk.png" alt="HDFCBAnk">
+                            </div>
+                            <div>
+                                <img src="images/placement-logos/IKure.png" alt="IKure">
+                            </div>
+                            <div>
+                                <img src="images/placement-logos/Khadims.png" alt="Khadims">
+                            </div>
+                            <div>
+                                <img src="images/placement-logos/KotakMahindra.png" alt="KotakMahindra">
+                            </div>
+                            
+          
                         </div>
                     </div>
                 </div>
@@ -508,21 +672,21 @@ well qualified personnel.</p>
                     <div class="col-lg-4 col-sm-6">
                         <div class="c-info">
                             <h5 class="text-center"><b>Call Us</b></h5>
-                            <p class="text-center">(080) 123 456 7890</p>
+                            <p class="text-center"><a href="tel:+91 9903639490">+91 9903639490</a></p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-sm-6">
                         <div class="c-info">
                             <h5 class="text-center"><b>Email</b></h5>
-                            <p class="text-center"><a href="#">care@domain.com</a></p>
+                            <p class="text-center"><a href="mailto:info@imsbizschool.com">info@imsbizschool.com</a></p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-sm-6">
                         <div class="c-info">
                             <h5 class="text-center"><b>Address</b></h5>
-                            <p class="text-center">72, Wallstreet, NY 20110</p>
+                            <p class="text-center"><a target="_blank" href="https://www.google.com/maps/place/IMS+BUSINESS+SCHOOL/@22.4602571,88.4096933,15z/data=!4m5!3m4!1s0x0:0xc2e74ff2a808110a!8m2!3d22.4602571!4d88.4096933">Roypur Ghutiary Sharif Road, Sonarpur, 700150</a></p>
                         </div>
                     </div>
 
@@ -657,11 +821,7 @@ well qualified personnel.</p>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="js/vendors/gmap.js"></script>
 
-    <script>
-        function myFunction() {
-            console.log("hi");
-        }
-    </script>
+    <script src="js/mail.js"></script>
 
 </body>
 
